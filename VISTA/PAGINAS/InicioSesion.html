@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesion</title>
+
+    <link rel="stylesheet" href="../vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container mt-3 text-white" style="background-color: rgb(79, 90, 121);">
+        <center>
+            <h3>Iniciar Sesion</h3>
+            <P>Puedes Iniciar Sesion utlizando tu Correo electronico o Numero Telefonico</P>
+            <form action="../../CONTROLADOR/validar.php" method="get">
+                <div class="mb-2 mt-3">
+                    <input class="form-control" type="text" name="txtUsuario" id="txtUsuario"
+                        placeholder="Escribe tu Usuario">
+                </div>
+
+                <div class="mb-3">
+                    <input class="form-control" type="password" name="txtPassword" id="txtPassword"
+                        placeholder="Escribe tu contraseña">
+                    <br>
+                    <a href="olvidastecon.html">Olvidaste tu Contraseña?</a>
+                </div>
+
+                <div class="mb-3">
+                    <input href="inicioo.html" class="btn btn-danger" type="submit" value="Inicia Sesion"
+                        name="btnIniciaSesion" id="btnIniciaSesion">
+                </div>
+        </center>
+        <center> <label for="">Si eres nuevo crea una cuenta</label>
+
+            <br>
+            <button class="btn btn-warning" id="btnCrearCuenta" name="btnCrearCuenta"> <b> <a
+                        style="text-decoration: none;" href="../PAGINAS/CreaCuentaNEW.html"> Crear Cuenta</a></b></button>
+        </center>
+        <br>
+    </div>
+    <br>
+</body>
+
+</html>
