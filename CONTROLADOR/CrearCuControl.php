@@ -23,7 +23,7 @@ echo 'Nombre Foto '.$nombreFotoUsuario;
 $nombreServidor="localhost:3306";
 $nombreUsuarioServidor="root";
 $claveServidor="";
-$nombreBDServidor="mark3tievnd";
+$nombreBDServidor="segundamarket";
 
 
 try {
@@ -32,7 +32,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 
-    $instruccionesSQL=$conn->prepare("call mark3tievnd.sp_crearCuenta(:nomUsuario, :ApellidoPUsuario, :ApellidoMUsuario,
+    $instruccionesSQL=$conn->prepare("call segundamarket.sp_crearCuenta(:nomUsuario, :ApellidoPUsuario, :ApellidoMUsuario,
     :EmailUsuario, :TelUsuario, :FotoUsuario, :NomFotoUsuario, :Nomlogin, :Clavelog, :idrolusuario)");
     $instruccionesSQL->bindParam(':nomUsuario',$nombreUsuario);
     $instruccionesSQL->bindParam(':ApellidoPUsuario',$apellidoPUsuario);

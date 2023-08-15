@@ -8,13 +8,13 @@ $contraseña= $_GET['txtPassword'];
 $nombreServidor="localhost:3306";
 $nombreUsuarioServidor="root";
 $claveServidor="";
-$nombreBDServidor="mark3tievnd";
+$nombreBDServidor="segundamarket";
 
 try {
     $conn = new PDO("mysql:host=" . $nombreServidor . ";dbname=" . $nombreBDServidor, $nombreUsuarioServidor, $claveServidor);
     $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    $instrucionSQL=$conn->prepare("call mark3tievnd.sp_validarLogin(:user,:password);");
+    $instrucionSQL=$conn->prepare("call segundamarket.sp_validarLogin(:user,:password);");
     $instrucionSQL->bindParam(':user',$usuario);
     $instrucionSQL->bindParam(':password',$contraseña);
     $instrucionSQL->execute();
